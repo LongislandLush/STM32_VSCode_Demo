@@ -1,0 +1,51 @@
+# STM32 VSCode Demo
+
+My first STM32 project using VS Code + STM32 Extension + CMake workflow.
+
+## Board
+- STM32F407G-DISC1
+- STM32F407VG MCU
+
+## Development Environment
+- VS Code
+- STM32CubeMX
+- STM32 Extension for VS Code
+- ARM GCC Toolchain
+- CMake + Ninja
+- ST-LINK
+
+## Features
+- PD12 ~ PD15 onboard LED blinking
+- HAL GPIO control
+- HAL delay timing
+
+## Code Example
+
+```c
+HAL_GPIO_TogglePin(GPIOD, LED_BLUE_Pin);
+
+HAL_GPIO_TogglePin(GPIOD, LED_GREEN_Pin);
+
+HAL_GPIO_TogglePin(GPIOD, LED_ORANGE_Pin);
+
+HAL_GPIO_TogglePin(GPIOD, LED_RED_Pin);
+
+HAL_Delay(300);
+```
+## Learning Goal
+
+This project is used to practice:
+
+- STM32 HAL development
+- GPIO control
+- VS Code STM32 workflow
+- Git & GitHub integration
+- Embedded firmware debugging
+
+## Debug
+- ST-LINK debugging enabled
+- Breakpoint and register watch tested successfully
+
+## Author
+
+Leon / LongislandLush
