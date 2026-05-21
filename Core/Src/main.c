@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stm32f407xx.h"
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_hal_gpio.h"
 
@@ -97,16 +98,60 @@ int main(void)
   while (1)
   {
     
-    HAL_GPIO_TogglePin(GPIOD, LED_BLUE_Pin);
+    // Four Leds blink - HAL Version
 
-    HAL_GPIO_TogglePin(GPIOD, LED_GREEN_Pin);
+    // HAL_GPIO_TogglePin(GPIOD, LED_GREEN_Pin);
 
-    HAL_GPIO_TogglePin(GPIOD, LED_ORANGE_Pin);
+    // HAL_GPIO_TogglePin(GPIOD, LED_ORANGE_Pin);
 
-    HAL_GPIO_TogglePin(GPIOD, LED_RED_Pin);
+    // HAL_GPIO_TogglePin(GPIOD, LED_RED_Pin);
+
+    // HAL_GPIO_TogglePin(GPIOD, LED_BLUE_Pin);
     
-    HAL_Delay(300);
+    // HAL_Delay(300);
 
+    // Four Leds running light - HAL Version 
+
+    // Green ON
+    HAL_GPIO_WritePin(GPIOD, LED_GREEN_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_GREEN_Pin, GPIO_PIN_RESET);
+
+    // Orange ON
+    HAL_GPIO_WritePin(GPIOD, LED_ORANGE_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_ORANGE_Pin, GPIO_PIN_RESET);
+
+    // Red ON
+    HAL_GPIO_WritePin(GPIOD, LED_RED_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_RED_Pin, GPIO_PIN_RESET);
+
+    // Blue ON
+    HAL_GPIO_WritePin(GPIOD, LED_BLUE_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_BLUE_Pin, GPIO_PIN_RESET);
+
+    // Red ON
+    HAL_GPIO_WritePin(GPIOD, LED_RED_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_RED_Pin, GPIO_PIN_RESET);
+
+    // Orange ON
+    HAL_GPIO_WritePin(GPIOD, LED_ORANGE_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_ORANGE_Pin, GPIO_PIN_RESET);
+
+    // Green ON
+    HAL_GPIO_WritePin(GPIOD, LED_GREEN_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_GREEN_Pin, GPIO_PIN_RESET);
+
+    // Blue ON
+    HAL_GPIO_WritePin(GPIOD, LED_BLUE_Pin, GPIO_PIN_SET);
+    HAL_Delay(200);
+    HAL_GPIO_WritePin(GPIOD, LED_BLUE_Pin, GPIO_PIN_RESET);
+   
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
